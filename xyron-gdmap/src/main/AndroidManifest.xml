@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+	<!--允许访问网络，必选权限-->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<!--用于访问GPS定位-->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<!--允许获取粗略位置，若用GPS实现定位小蓝点功能则必选-->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<!--允许获取网络状态，用于网络定位，若无gps但仍需实现定位小蓝点功能则此权限必选-->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<!--允许获取wifi网络信息，用于网络定位，若无gps但仍需实现定位小蓝点功能则此权限必选-->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<!--允许获取wifi状态改变，用于网络定位，若无gps但仍需实现定位小蓝点功能则此权限必选-->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+	<!--如果您的应用需要后台定位权限，且有可能运行在Android Q设备上,并且设置了target>28，必须增加这个权限声明-->
+	<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+	<!--用于申请调用A-GPS模块-->
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<!--允许写入扩展存储，用于数据缓存，若无此权限则写到私有目录-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!-- 可以提高室内定位的精确度 -->
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<!--允许写设备缓存，用于问题排查-->
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<!--允许读设备等信息，用于问题排查-->
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<!--如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限-->
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<!-- 可以提高室内定位的精确度 -->
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<application>
+	<!-- 百度key -->
+		<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="etpji7pwC7o16IwEes19g1Cyd7hj1ruW" />
+		
+		
+		
+		<!-- 高德key -->
+		<meta-data android:name="com.amap.api.v2.apikey" android:value="8d5b47b35632acc7168f84639b44eb22">
+		</meta-data>
+		<!-- 高德地图声明服务组件 -->
+		<service android:name="com.amap.api.location.APSService"></service>
+		
+	</application>
+
+</manifest>
